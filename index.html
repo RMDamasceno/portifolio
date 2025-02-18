@@ -1,61 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rafael Damasceno - Portfólio</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleContent(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === "none" || element.style.display === "") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
 </head>
-
 <body>
     <header>
         <h1>Rafael Damasceno</h1>
         <p>DevOps | Infraestrutura | Automação</p>
         <nav>
             <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#experiencia">Experiência</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#" onclick="toggleContent('sobre')">Sobre</a></li>
+                <li><a href="#" onclick="toggleContent('experiencia')">Experiência</a></li>
+                <li><a href="#" onclick="toggleContent('projetos')">Projetos</a></li>
+                <li><a href="#" onclick="toggleContent('contato')">Contato</a></li>
             </ul>
         </nav>
     </header>
-
-    <section id="sobre">
-        <h2>Sobre Mim</h2>
-        <p>Profissional com ampla experiência em infraestrutura, nuvem (Azure e AWS) e automação, especializado na
-            implementação de pipelines CI/CD, Infraestrutura como Código (IaC) e orquestração de contêineres.</p>
-    </section>
-
-    <section id="experiencia">
-        <h2>Experiência Profissional</h2>
-        <ul>
-            <li><strong>OpenLabs - DevOps</strong> (Ago/2024 - Presente)</li>
-            <li><strong>OpenLabs - Analista de Sistemas</strong> (Jan/2023 - Ago/2024)</li>
-            <li><strong>CB Partners - Administrador de Rede</strong> (Mar/2020 - Jun/2023)</li>
-        </ul>
-    </section>
-
-    <section id="projetos">
-        <h2>Principais Projetos</h2>
-        <ul>
-            <li><strong>Migração para a nuvem na CB Partners</strong> - Liderança na migração de sistemas para o Azure.
-            </li>
-            <li><strong>Integração com Vtal no OpenLabs</strong> - Implementação de melhorias em ambiente híbrido.</li>
-        </ul>
-    </section>
-
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>Email: <a href="mailto:rafael_damasceno1@hotmail.com">rafael_damasceno1@hotmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/rafael-magnani-damasceno/"
-                target="_blank">rafael-magnani-damasceno</a></p>
-    </section>
-
+    
+    <main>
+        <section id="sobre" class="expandable-content" style="display:none;">
+            <h2>Sobre Mim</h2>
+            <p>Sou um profissional com vasta experiência em infraestrutura, nuvem (Azure e AWS) e automação. Especialista na implementação de pipelines CI/CD, Infraestrutura como Código (IaC) e orquestração de contêineres.</p>
+        </section>
+        
+        <section id="experiencia" class="expandable-content" style="display:none;">
+            <h2>Experiência Profissional</h2>
+            <ul>
+                <li><strong>OpenLabs - DevOps</strong> (Ago/2024 - Presente)</li>
+                <li><strong>OpenLabs - Analista de Sistemas</strong> (Jan/2023 - Ago/2024)</li>
+                <li><strong>CB Partners - Administrador de Rede</strong> (Mar/2020 - Jun/2023)</li>
+            </ul>
+        </section>
+        
+        <section id="projetos" class="expandable-content" style="display:none;">
+            <h2>Principais Projetos</h2>
+            <ul>
+                <li><strong>Migração para a nuvem na CB Partners</strong> - Liderança na migração de sistemas para o Azure.</li>
+                <li><strong>Integração com Vtal no OpenLabs</strong> - Implementação de melhorias em ambiente híbrido.</li>
+            </ul>
+        </section>
+        
+        <section id="contato" class="expandable-content" style="display:none;">
+            <h2>Contato</h2>
+            <p>Email: <a href="mailto:rafael_damasceno1@hotmail.com">rafael_damasceno1@hotmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/rafael-magnani-damasceno/" target="_blank">rafael-magnani-damasceno</a></p>
+        </section>
+    </main>
+    
     <footer>
         <p>&copy; 2024 Rafael Damasceno. Todos os direitos reservados.</p>
     </footer>
 </body>
-
 </html>
