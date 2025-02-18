@@ -10,8 +10,8 @@
         function toggleContent(id) {
             const sections = document.querySelectorAll('.expandable-content');
             sections.forEach(section => {
-                if (section.id === id) {
-                    if (section.style.display !== "none" || section.style.display !== "") {
+                if (section.id !== id) {
+                    if (section.stysle.display !== "none" || section.style.display !== "") {
                         section.classList.add('slide-out');
                         section.classList.remove('slide-in');
                         setTimeout(() => { section.style.display = "none"; }, 300);
@@ -21,9 +21,9 @@
                         section.classList.remove('slide-out');
                     }
                 } else {
-                    section.classList.add('slide-out');
-                    section.classList.remove('slide-in');
-                    setTimeout(() => { section.style.display = "none"; }, 300);
+                    section.classList.remove('slide-out');
+                    section.classList.add('slide-in');
+                    setTimeout(() => { section.style.display = "block"; }, 300);
                 }
             });
         }
