@@ -11,14 +11,14 @@
             const sections = document.querySelectorAll('.expandable-content');
             sections.forEach(section => {
                 if (section.id === id) {
-                    if (section.style.display === "none" || section.style.display === "") {
-                        section.style.display = "block";
-                        section.classList.add('slide-in');
-                        section.classList.remove('slide-out');
-                    } else {
+                    if (section.style.display != "none" || section.style.display != "") {
                         section.classList.add('slide-out');
                         section.classList.remove('slide-in');
                         setTimeout(() => { section.style.display = "none"; }, 300);
+                    } else {
+                        section.style.display = "block";
+                        section.classList.add('slide-in');
+                        section.classList.remove('slide-out');
                     }
                 } else {
                     section.classList.add('slide-out');
@@ -45,7 +45,7 @@
     </header>
 
     <main>
-        <section id="sobre" class="expandable-content" style="display:none;">
+        <section id="sobre" class="expandable-content" style="display:block;">
             <h2>Sobre Mim</h2>
             <p>Sou um profissional com vasta experiência em infraestrutura, nuvem (Azure e AWS) e automação.
                 Especialista na implementação de pipelines CI/CD, Infraestrutura como Código (IaC) e orquestração de
