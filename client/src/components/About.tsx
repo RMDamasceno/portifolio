@@ -1,6 +1,6 @@
-import { personalInfo, certifications, education, languages } from "@/lib/portfolio-data";
+import { personalInfo, achievements, education, languages } from "@/lib/portfolio-data";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Mail, Phone, MapPin, Linkedin, GraduationCap, Award, Languages } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, GraduationCap, Trophy, Languages } from "lucide-react";
 
 export default function About() {
   const { ref, visible } = useScrollReveal();
@@ -72,21 +72,21 @@ export default function About() {
 
             {/* Right: Cards */}
             <div className="space-y-6">
-              {/* Certifications */}
+              {/* Achievements */}
               <div className="glass-card p-6">
                 <div className="flex items-center gap-2 mb-4">
-                  <Award className="w-5 h-5 text-accent" />
-                  <h3 className="font-display font-semibold text-foreground">Certificações</h3>
+                  <Trophy className="w-5 h-5 text-accent" />
+                  <h3 className="font-display font-semibold text-foreground">Conquistas</h3>
                 </div>
                 <div className="space-y-3">
-                  {certifications.map((cert, idx) => (
-                    <div key={idx} className="flex items-center justify-between">
-                      <div>
-                        <p className="text-sm font-medium text-foreground">{cert.name}</p>
-                        <p className="text-xs text-muted-foreground">{cert.issuer}</p>
+                  {achievements.map((item, idx) => (
+                    <div key={idx} className="flex items-center justify-between gap-3">
+                      <div className="min-w-0">
+                        <p className="text-sm font-medium text-foreground">{item.label}</p>
+                        <p className="text-xs text-muted-foreground truncate">{item.description}</p>
                       </div>
-                      <span className="font-mono text-xs px-2 py-1 rounded bg-accent/10 text-accent">
-                        {cert.code}
+                      <span className="font-mono text-xs px-2 py-1 rounded bg-accent/10 text-accent whitespace-nowrap">
+                        {item.value}
                       </span>
                     </div>
                   ))}

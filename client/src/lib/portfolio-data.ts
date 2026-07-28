@@ -210,6 +210,14 @@ export const certifications = [
   { name: "AWS Solutions Architect Associate", code: "SAA", issuer: "Amazon Web Services" },
 ];
 
+export const achievements = [
+  { label: "Redução de Custos Cloud", value: "70%", description: "Otimização FinOps mantendo gastos estáveis em crescimento" },
+  { label: "Uptime em Produção", value: "99.95%", description: "SLA em 350+ aplicações críticas com 4 clusters AKS" },
+  { label: "Mitigação DDoS", value: "8M req/min", description: "Ataque mitigado sem downtime crítico via Zero Trust + Cloudflare" },
+  { label: "Redução de Fatura Cloud", value: "63%", description: "De R$1M para R$370k/mês com rightsizing e consolidação" },
+  { label: "Promoção Acelerada", value: "12 meses", description: "Promovido por alta performance e entrega de resultados" },
+];
+
 export const education = [
   {
     degree: "Tecnólogo em Defesa Cibernética, Redes e Segurança de Sistemas",
